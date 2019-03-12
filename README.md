@@ -1,6 +1,6 @@
 # gol-react
 ## Conway's game of life built in reactJS
-![Game Image](gol.png?raw=true "Game of life")
+![Game Image](GoL.png "Game of life")
 ------------
 ### Rules of life
 1. Any live cell with fewer than two live neighbors dies, as if caused by under population.
