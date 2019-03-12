@@ -1,9 +1,7 @@
 # gol-react
+## Conway's game of life built in reactJS
 
-Conway's game of life built in reactJS
------------
-
-## Rules of life
+### Rules of life
 1. Any live cell with fewer than two live neighbors dies, as if caused by under population.
 2. Any live cell with two or three live neighbors lives on to the next generation.
 3. Any live cell with more than three live neighbors dies, as if by overpopulation.
@@ -12,7 +10,7 @@ Conway's game of life built in reactJS
 [See the wiki for more details.](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 
 -----------
-## Development Commands 
+### Development Commands 
 
 `yarn`
   Install all dependencies for a project
