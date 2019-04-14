@@ -1,24 +1,10 @@
 import React from 'react';
 import './Game.css';
+import {Cell, CELL_SIZE} from  './Cell';
 
-const CELL_SIZE = 20;
 const GAME_WIDTH = 1200;
 const GAME_HEIGHT = 800;
 
-// TODO: Change cell into function component
-class Cell extends React.Component {
-    render() {
-        const { x, y } = this.props;
-        return (
-            <div className="Cell" style={{
-                left: `${CELL_SIZE * x + 1}px`,
-                top: `${CELL_SIZE * y + 1}px`,
-                width: `${CELL_SIZE - 1}px`,
-                height: `${CELL_SIZE - 1}px`,
-            }} />
-        );
-    }
-}
 
 class Game extends React.Component {
     constructor() {
@@ -194,18 +180,24 @@ class Game extends React.Component {
                     ))}
                 </div>
                 <div className="controls">
-                    Update every <input value={this.state.interval}
-                        onChange={this.handleIntervalChange} /> msec
-                {this.state.isRunning ?
-                        <button className="button"
-                            onClick={this.stopGame}>Stop</button> :
-                        <button className="button"
-                            onClick={this.runGame}>Run</button>
-                    }
-                First generation seed <input value={this.state.seed}
-                        onChange={this.handleSeedChange} />
-                <button className="button"
-                        onClick={this.seedGame}>Seed Game</button>
+                    <div>
+                        <p style={{display: "inline-block"}}>
+                            Update every <input value={this.state.interval}
+                                onChange={this.handleIntervalChange} /> msec    
+                        </p>
+                    </div>
+                    <div>
+                        <p style={{display: "inline-block"}}>First generation seed <input value={this.state.seed}
+                            onChange={this.handleSeedChange} /> </p>
+                        <button onClick={this.seedGame}>Seed Game</button>
+                    </div>
+                    <div>
+                        {this.state.isRunning ?
+                            <button 
+                                onClick={this.stopGame}>Stop</button> :
+                            <button onClick={this.runGame}>Run</button>
+                        }
+                    </div>
                 </div>
             </div>
         );
