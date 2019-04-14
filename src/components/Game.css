@@ -6,3 +6,24 @@
     linear-gradient(#333 1px, transparent 1px),
     linear-gradient(90deg, #333 1px, transparent 1px);
 }
+
+.Controls {
+    display: flex;
+    color: var(--hacker-green);
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    padding: 5px 5px 5px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    align-items: center;
+  }
+  
+.Controls > div {
+    background-color: #f1f1f1;
+    margin: 16px;
+    height: 64px;
+    float:right;
+    display: inline-block;
+    align-items: center;
+}
